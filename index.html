@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan — Dimas & Sekar</title>
+  <meta name="description" content="Undangan pernikahan Dimas & Sekar" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== COVER / PEMBUKA ===== -->
+  <section id="cover" class="cover">
+    <div class="cover__overlay"></div>
+    <div class="cover__content">
+      <p class="cover__pretitle">The Wedding Of</p>
+      <h1 class="cover__names">Dimas &amp; Sekar</h1>
+      <p class="cover__date">Sabtu, 12 Desember 2026</p>
+      <div class="cover__guest">
+        <p>Kepada Yth.</p>
+        <p class="cover__guest-name" id="guestName">Bapak/Ibu/Saudara/i</p>
+      </div>
+      <button class="btn btn--open" id="openBtn">Buka Undangan</button>
+    </div>
+  </section>
+
+  <!-- ===== KONTEN UTAMA (disembunyikan sampai cover dibuka) ===== -->
+  <main id="main" class="main main--hidden">
+
+    <!-- Tombol musik -->
+    <button class="music-toggle" id="musicToggle" aria-label="Putar / jeda musik">
+      <span class="music-toggle__icon" id="musicIcon">♪</span>
+    </button>
+
+    <!-- MEMPELAI -->
+    <section class="section couple" id="couple">
+      <p class="script-title">Bismillahirrahmanirrahim</p>
+      <p class="section__intro">
+        Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
+        menyelenggarakan pernikahan putra-putri kami:
+      </p>
+      <div class="couple__grid">
+        <div class="couple__card">
+          <img src="assets/img/groom.jpg" alt="Foto mempelai pria" class="couple__photo" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80'" />
+          <h2 class="couple__name">Dimas Pratama</h2>
+          <p class="couple__parent">Putra dari Bpk. Ahmad &amp; Ibu Siti</p>
+        </div>
+        <div class="couple__amp">&amp;</div>
+        <div class="couple__card">
+          <img src="assets/img/bride.jpg" alt="Foto mempelai wanita" class="couple__photo" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80'" />
+          <h2 class="couple__name">Sekar Ayu</h2>
+          <p class="couple__parent">Putri dari Bpk. Budi &amp; Ibu Rina</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HITUNG MUNDUR -->
+    <section class="section countdown" id="countdown">
+      <h2 class="section__title">Menuju Hari Bahagia</h2>
+      <div class="countdown__grid">
+        <div class="countdown__item"><span id="cdDays">0</span><small>Hari</small></div>
+        <div class="countdown__item"><span id="cdHours">0</span><small>Jam</small></div>
+        <div class="countdown__item"><span id="cdMins">0</span><small>Menit</small></div>
+        <div class="countdown__item"><span id="cdSecs">0</span><small>Detik</small></div>
+      </div>
+    </section>
+
+    <!-- ACARA -->
+    <section class="section event" id="event">
+      <h2 class="section__title">Rangkaian Acara</h2>
+      <div class="event__grid">
+        <div class="event__card">
+          <h3>Akad Nikah</h3>
+          <p>Sabtu, 12 Desember 2026</p>
+          <p>08.00 — 10.00 WIB</p>
+        </div>
+        <div class="event__card">
+          <h3>Resepsi</h3>
+          <p>Sabtu, 12 Desember 2026</p>
+          <p>11.00 — 14.00 WIB</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI FOTO -->
+    <section class="section gallery" id="gallery">
+      <h2 class="section__title">Galeri Kami</h2>
+      <div class="gallery__grid" id="galleryGrid"><!-- diisi oleh JS --></div>
+    </section>
+
+    <!-- LOKASI -->
+    <section class="section location" id="location">
+      <h2 class="section__title">Lokasi Acara</h2>
+      <p class="section__intro">Gedung Graha Bahagia, Jl. Melati No. 1, Jakarta</p>
+      <div class="location__map">
+        <iframe
+          title="Peta lokasi acara"
+          src="https://www.google.com/maps?q=Monas+Jakarta&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <a class="btn btn--map" href="https://www.google.com/maps?q=Monas+Jakarta" target="_blank" rel="noopener">Buka di Google Maps</a>
+    </section>
+
+    <!-- UCAPAN / RSVP -->
+    <section class="section wishes" id="wishes">
+      <h2 class="section__title">Ucapan &amp; Doa</h2>
+      <form class="wishes__form" id="wishForm">
+        <input type="text" id="wishName" placeholder="Nama kamu" required />
+        <select id="wishRsvp">
+          <option value="Hadir">Insya Allah Hadir</option>
+          <option value="Tidak Hadir">Maaf, Belum Bisa Hadir</option>
+          <option value="Ragu">Masih Ragu</option>
+        </select>
+        <textarea id="wishMessage" placeholder="Tulis ucapan & doa..." rows="3" required></textarea>
+        <button type="submit" class="btn">Kirim Ucapan</button>
+      </form>
+      <div class="wishes__list" id="wishList"><!-- diisi oleh JS --></div>
+    </section>
+
+    <footer class="footer">
+      <p class="script-title">Dimas &amp; Sekar</p>
+      <p>Terima kasih atas doa &amp; restu Anda</p>
+    </footer>
+  </main>
+
+  <!-- Musik latar -->
+  <audio id="bgMusic" loop>
+    <source src="assets/music/song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
