@@ -10,12 +10,18 @@ const WEDDING_DATE = new Date("2026-12-12T08:00:00+07:00");
 // Daftar foto galeri. Ganti dengan foto kamu di assets/img/
 // atau biarkan URL contoh di bawah ini.
 const GALLERY_PHOTOS = [
-  "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80",
-  "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=500&q=80",
-  "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=500&q=80",
-  "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=500&q=80",
-  "https://images.unsplash.com/photo-1525258946800-98c7b9d6e6f7?w=500&q=80",
-  "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=500&q=80",
+  "assets/img/1.jpg",
+  "assets/img/2.jpg",
+  "assets/img/3.jpg",
+  "assets/img/4.jpg",
+  "assets/img/5.jpg",
+  "assets/img/6.jpg",
+  // "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80",
+  // "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=500&q=80",
+  // "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=500&q=80",
+  // "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=500&q=80",
+  // "https://images.unsplash.com/photo-1525258946800-98c7b9d6e6f7?w=500&q=80",
+  // "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=500&q=80",
 ];
 
 const STORAGE_KEY = "wedding_wishes";
